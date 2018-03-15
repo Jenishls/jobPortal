@@ -57,15 +57,10 @@ class Connection
     
     }
 
-    
 
-    function checkUsername($sql)
-    {
-        $res= $connect->query($sql);
-        return $count = $res->num_rows;
-    }
 
 }
+
 
 
 ?>

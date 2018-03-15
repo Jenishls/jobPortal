@@ -178,37 +178,34 @@
 	                      		<legend>Employer Form</legend>
 	                      		<div>
 	                      			<label>Company Name</label>
-	                      			<input type="text" name="" class="form-control">	
+	                      			<input type="text" name="companyName" class="form-control">	
 	                      		</div>
 
 	                      		<div>
 	                      			<label>Description</label>
-	                      			<textarea rows="4" name="" class="form-control"></textarea>	
+	                      			<textarea rows="4" name="description" class="form-control"></textarea>	
 	                      		</div>
 
-	                      		<div>
-	                      			<label>Last Name</label>
-	                      			<input type="text" name="" class="form-control">	
-	                      		</div>
-
-	                      		<div>
-	                      			<label> Date of Birth</label>
-	                      			<input type="text" name="" class="form-control">	
-	                      		</div>
+	                      		
 
 	                      		<div>
 	                      			<label> Industry</label>
-	                      			<input type="text" name="" class="form-control">	
+	                      			<input type="text" name="industry" class="form-control">	
 	                      		</div>
+
+                            <div>
+                              <label> Address</label>
+                              <input type="text" name="employer-address" class="form-control"> 
+                            </div>
 
 	                      		<div>
 	                      			<label> Phone</label>
-	                      			<input type="text" name="" class="form-control">	
+	                      			<input type="text" name="phone" class="form-control">	
 	                      		</div>
 
 	                      		<div>
 	                      			<label>Website</label>
-	                      			<input type="text" name="" class="form-control">	
+	                      			<input type="text" name="website" class="form-control">	
 	                      		</div>
 
 	                      		<div>
@@ -218,15 +215,15 @@
 
 	                      		<div>
 	                      			<label> Password</label>
-	                      			<input type="password" name="password" id="password" class="form-control">	
+	                      			<input type="password" name="employer-password" id="password" class="form-control">	
 	                      		</div>
 	                      		
 	                      		<div>
 	                      			<label> Confirm Password</label>
-	                      			<input type="password" name="confirm-password" id="confirm-password" class="form-control">	
+	                      			<input type="password" name="employer-confirm-password" id="confirm-password" class="form-control">	
 	                      		</div>
 	                      		<div class="py-5">
-	                      			<input type="submit" name="jobseeker-register-btn" class="btn btn-success form-control" value="Register">
+	                      			<input type="submit" name="employer-register-btn" class="btn btn-success form-control" value="Register">
 		
 	                      		</div>
 	                      		
@@ -425,14 +422,10 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
     <script src="js/bootstrap.js"></script>
+    <script src="js/account.js"></script>
 
     <script>
-
-    	// function closeLogin(){
-    	// 	$('#myModal').hide();
-
-    	// }
-
+      
     	$( '#choose-jobseeker' ).click(function() {
     		$('#reg-employer-form' ).hide();
 
