@@ -57,6 +57,10 @@ class Connection
     
     }
 
+    function count($sql){
+        return $this->connect->query($sql);
+    }
+
 
 
 }
