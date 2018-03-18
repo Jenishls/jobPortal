@@ -66,7 +66,7 @@ require_once 'connection.php';
 				$this->gender = $gender;
 			}
 			public function setAddress($address){
-				$this->addresss = $address;
+				$this->address = $address;
 			}
 			public function setPhone($phone){
 				$this->phone = $phone;
@@ -90,28 +90,25 @@ require_once 'connection.php';
 			/* register function */
 
 			function register(){
+				$query = "INSERT INTO user_account (email,password,image,user_type_id) VALUES ('$this->email', '$this->password','$this->image','$this->user_type_id') ";
 
-				function addUser(){
-					$query = "INSERT INTO user_account (email,password,image,user_type_id) VALUES ('$this->email', '$this->password','$this->image','$this->user_type_id') ";
+				$this->connect->Iud($query);
 
-					$this->connect->Iud($query);
-					$id = mysqli_insert_id($connect);
-					setUserId($id);
-				}
+				// $id = $this->connect->getData("SELECT max(user_id) from user_account");
+				// setUserId($id);
+				
 
-				if($user_type_id == 1){
-					function addJobseeker(){
-						$query = "INSERT INTO jobseeker_profile(fname,mname,lname,dob,gender,address,phone,user_id) values ('$this->fname','$this->mname','$this->lname','$this->dob','$this->gender','$this->address','$this->phone','$this->user_id')";
-						$this->connect->Iud($query);
-					}
+				if($this->user_type_id == 1){
+					$query = "INSERT INTO jobseeker_profile(fname,mname,lname,dob,gender,address,phone,user_id) values ('$this->fname','$this->mname','$this->lname','$this->dob','$this->gender','$this->address','$this->phone',LAST_INSERT_ID())";
+					return	$this->connect->Iud($query);
+					
 
 				}
-				elseif ($user_type_id ==2) {
-					function addEmployer(){
-						$query = "INSERT into company (company_name,description,industry,address,phone,website,user_id) VALUES ('$this->company_name','$this->description','$this->industry','$this->address','$this->phone','$this->website','$this->user_id')";
-						$this->connect->Iud($query);
+				elseif ($this->user_type_id ==2) {
+					$query = "INSERT into company (company_name,description,industry,address,phone,website,user_id) VALUES ('$this->company_name','$this->description','$this->industry','$this->address','$this->phone','$this->website',LAST_INSERT_ID())";
+					return $this->connect->Iud($query);
 
-					}
+					
 				}
 				else{
 
@@ -123,18 +120,35 @@ require_once 'connection.php';
 			/* login function */
 
 			function login(){
-				$query = "SELECT count(email) FROM user_account WHERE username = '$this->email' AND password = '$this->password' ";
-				$count = $this->connect->getData($query);
-
-				if($count > 0){
-
+				$query = "SELECT * FROM user_account WHERE email = '$this->email' AND password = '$this->password'";
+				$data = $this->connect->getData($query);
+				
+				if(count($data) > 0){
+					$userType = $data[0]['user_type_id'];
+					$userId = $data[0]['user_id'];
+					session_start();
+					$_SESSION['permission']=true;
+					$_SESSION['userType'] = $userType;
+					$_SESSION['userId'] = $userId;
+					return $userType;
+					
 				}
 				else{
+					return false;
 
 				}
 			}
 
-			
+			function checkEmail(){
+				$query = "SELECT count(email) FROM user_account WHERE email='$this->email'";
+				$data = $this->connect->getData($query);
+				foreach ($data as $key) {
+					$count = $key['count(email)'];
+				}
+
+				return $count;
+
+			}
 
 			
 
