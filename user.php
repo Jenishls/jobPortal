@@ -150,6 +150,23 @@ require_once 'connection.php';
 
 			}
 
+			function changeEmailPassword(){
+			 // return $this->password;
+				$query = "UPDATE user_account SET
+									email = '$this->email',
+									password = '$this->password'
+									where user_id=$this->user_id ";
+				return $this->connect->Iud($query);					
+			}
+
+			function changeEmail(){
+				$query = "UPDATE user_account SET
+									email = '$this->email'
+									where user_id = $this->user_id";
+				return $this->connect->Iud($query);
+
+			}
+
 			
 
 			
