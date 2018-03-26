@@ -1,3 +1,4 @@
+
 $("input[name='employer-confirm-password']").on("keyup", function() {
   var pw = $("input[name='employer-password']").val();
   var confirm_pw = $("input[name='employer-confirm-password']").val();
@@ -76,11 +77,8 @@ function registerJobseeker(data) {
   $.ajax({
     url: "registerJobseeker.php",
     data: data,
-    type: 'POST',
-    beforeSend: function() {
-
-    },
-
+    method: 'POST',
+    
     success: function(data) {
       alert(data)
     },
@@ -96,7 +94,7 @@ function registerEmployer(data) {
   $.ajax({
     url: "registerEmployer.php",
     data: data,
-    type: 'POST',
+    method: 'POST',
     beforeSend: function() {
 
     },
@@ -130,14 +128,15 @@ $('#login-submit').click(function(e) {
     }
     console.log(valid);
   });
-  
+    
   if (valid) {
     var a = $('#login-form').serializeArray();
     $.ajax({
       url: 'login.php',
-      type: 'post',
+      method: 'post',
       data: a,
       success: function(data) {
+        
         if (data == false) {
           alert("Provided credentials do not match");
         }else{
@@ -160,12 +159,11 @@ $('#login-submit').click(function(e) {
 
 $('#jobseeker-email,#employer-email').on('keyup',function(){
     var email = $(this).serializeArray();
-    
-    
+       
      $.ajax({
         url:'emailCheck.php',
         data: email,
-        type:'post',
+        method:'post',
         success:function(data){
           //alert(data);
           if(data == 1 ){
@@ -185,6 +183,8 @@ $('#jobseeker-email,#employer-email').on('keyup',function(){
         error:function(){}
      });
 });
+
+
 
 
 
