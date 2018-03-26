@@ -1,235 +1,306 @@
-
 /*-------------------
-	utility classes
+    utility classes
 ---------------------*/
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .color-default {
-    background-color: #eae9e7;
+  background-color: #eae9e7;
 }
 
 
 .btn-red {
-    background-color: rgba(255, 0, 0, 0.7);
-    border: 1px solid white;
-    color: white;
+  background-color: rgba(255, 0, 0, 0.7);
+  border: 1px solid white;
+  color: white;
 }
 
-.btn-red:hover{
-	background-color: #fff;
-	border: 1px solid red;
-	color:red;
-	font-weight: 600;
+.btn-red:hover {
+  background-color: #fff;
+  border: 1px solid red;
+  color: red;
+  font-weight: 600;
 }
 
 .btn-blue {
-    background-color: rgba(0, 0, 255, 0.7);
-    border-color: white;
-    color: white;
+  background-color: rgba(0, 0, 255, 0.7);
+  border-color: white;
+  color: white;
 }
 
-.btn-blue:hover{
-	background-color: #fff;
-	border: 1px solid blue;
-	color:blue;
-	font-weight: 600;
+.btn-blue:hover {
+  background-color: #fff;
+  border: 1px solid blue;
+  color: blue;
+  font-weight: 600;
 }
 
 S
-
-
 /*---------------
-	nav
+    nav
 -----------------*/
 
- .navbar-brand {
-    font-family: 'Lobster', cursive !important;
-    margin-left: 60px;
-    color: #fd4845;
-    font-size: 26px;
+#logo {
+  font-family: 'Lobster', cursive !important;
+  margin-left: 60px;
+  color: #fd4845;
+  font-size: 30px !important;
 }
 
 .ml-auto .nav-link {
-    /*color: #fff !important;*/
-    color: #fd4845 !important;
-    /*background-color: #3b3df3 !important;*/
+  /*color: #fff !important;*/
+  color: #fd4845 !important;
+  /*background-color: #3b3df3 !important;*/
 }
+
 
 /*---------------
    registration
 -----------------*/
 
-
-.modal-body .choose button{
-	border:0;
-	padding: 0 !important; 
-
+.modal-body .choose button {
+  border: 0;
+  padding: 0 !important;
 }
 
-.modal-body .choose button:hover{
-	cursor: pointer;
-	
-	
+.modal-body .choose button:hover {
+  cursor: pointer;
 }
 
-#reg-jobseeker-form , #reg-employer-form {
-	font-family: Georgia,Times,Times New Roman,serif !important;
-	line-height: 1.5rem
+#reg-jobseeker-form,
+#reg-employer-form {
+  font-family: Georgia, Times, Times New Roman, serif !important;
+  line-height: 1.5rem
 }
 
-legend{
-	margin-bottom: 20px;
-	font-weight: 600px;
+legend {
+  margin-bottom: 20px;
+  font-weight: 600px;
 }
 
-#reg-jobseeker-form
-{
-	padding: 25px 0;
-	display: none;
+#reg-jobseeker-form {
+  padding: 25px 0;
+  display: none;
 }
 
-#reg-employer-form
-{
-	padding: 25px 0;
-	display: none;
+#reg-employer-form {
+  padding: 25px 0;
+  display: none;
 }
+
 
 
 /*---------------
-	header
+    header
 -----------------*/
 
 header .right {
-    background-image: url(../images/employer.jpeg);
-    height: 100%;
-    width: 100%;
+  background-image: url(../images/employer.jpeg);
+  height: 100%;
+  width: 100%;
 }
 
 header .col-6 {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 header .left {
-    background-image: url(../images/jobseeker.jpeg);
-    height: 100%;
-    width: 100%;
+  background-image: url(../images/jobseeker.jpeg);
+  height: 100%;
+  width: 100%;
 }
 
 header .jumbotron {
-    margin-bottom: 0;
-    border-radius: 0rem;
+  margin-bottom: 0;
+  border-radius: 0rem;
 }
+
 
 
 /*---------------
-	jumbotron
+    jumbotron
 -----------------*/
 
 .jumbotron {
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    border-radius: 0.3rem;
-    color: #fff;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+  color: #fff;
 }
 
 .jumbotron-red {
-    background-color: rgba(255, 0, 0, 0.7);
+  background-color: rgba(255, 0, 0, 0.7);
 }
 
 .jumbotron-blue {
-    background-color: rgba(0, 0, 255, 0.7);
+  background-color: rgba(0, 0, 255, 0.7);
 }
 
 
 
 .banner {
-    background-image: url(../images/workplace.jpg);
+  background-image: url(../images/workplace.jpg);
 }
 
 .banner .jumbotron {
-    padding-top: 50px;
-    margin-top: 8rem;
-    margin-bottom: 8rem;
+  padding-top: 50px;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
 }
 
 
 .main img {
-    position: absolute;
+  position: absolute;
 }
 
 
 
+
 /*---------------
-	footer
+    footer
 -----------------*/
 
 footer {
-    padding: 15px;
-    background-color: #495057;
-    color: white;
+  padding: 15px;
+  background-color: #495057;
+  color: white;
 }
 
 
 
 
 .services {
-    /*background-color: #6c757d;*/
+  /*background-color: #6c757d;*/
 }
+
 
 
 
 /*----------------------
   After login  Sidebar
 ------------------------*/
-.sidebar ul{
-    list-style-type: none;
 
+.sidebar ul {
+  list-style-type: none;
 }
 
-.sidebar li{
-    margin-left:-50px; 
-    padding: 20px 0px;
-    font-weight: 500;
-    text-align: center;
+.sidebar li {
+  margin-left: -50px;
+  padding: 20px 0px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
 }
 
-.sidebar li:hover{
-    background-color: #eee;
+.sidebar li:hover {
+  background-color: #eee;
 }
+
 
 
 /*----------------------
   After login  jobseeker
 ------------------------*/
-#resume{
-    display: none;
+
+#appliedJobs {
+  display: none;
 }
 
-#appliedJobs{
-    display: none;
+#searchJobs {
+  display: none;
 }
 
-#searchJobs{
-    display: none;
+#editProfile {
+  display: none;
 }
 
-#editProfile{
-    display: none;
+
+#search-result {
+  display: none;
 }
+
+
+#personal-btn:hover,
+#education-btn:hover,
+#experience-btn:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+#personal-btn,
+#education-btn,
+#experience-btn {
+  background-color: #eee;
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+
+#personal,
+#education,
+#experience,
+#edu-add,
+#edu-update,
+#exp-add,
+#exp-update,
+#interested button+div,
+#vacancy,
+#vacancy .btn-primary {
+  display: none;
+}
+
+
+
 
 
 /*----------------------
   After login  employer
 ------------------------*/
 
-#listVacancies{
-    display: none;
+#listVacancies {
+  display: none;
 }
 
-#editProfile{
-    display: none;
+#editProfile {
+  display: none;
+}
+
+#listCandidates {
+  display: none;
+}
+
+#listCandidates table {
+  margin-top: 25px;
+}
+
+#editForm {
+  display: none;
+}
+
+#general,
+#list-error-msg,
+#candidateProfile {
+  display: none;
+}
+
+#general-btn:hover,
+#login-btn:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+#login-btn,
+#general-btn {
+  background-color: #eee;
+  margin-bottom: 18px;
+}
+
+#login {
+  display: none;
+}
+
+#login-error-msg {
+  display: none;
 }
